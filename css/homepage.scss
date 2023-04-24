@@ -1,0 +1,18 @@
+@use "../css/sass/helpes/variables" as *;
+@use "../css/sass/helpes/mixins" as *;
+@use "../css/sass/helpes/functions" as *;
+@use "../css/sass/pages/globalpage" as *;
+@use "../css/sass/components/buttons" as *;
+@use "../css/sass/layout/grid" as *;
+@use "../css/sass/components/class" as *;
+@use "../css/sass/layout/header" as *;
+@use "../css/sass/pages/home" as *;
+@use "../css/sass/components/headings" as *;
+@use "../css/sass/layout/footer" as *;
+
+$phone: "(max-width:767px)";
+@mixin minMedium {
+  @media (max-width: 991px) {
+    @content;
+  }
+}

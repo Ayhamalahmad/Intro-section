@@ -1,0 +1,15 @@
+@use "../helpes/variables" as *;
+
+.border{
+    transition: $main-trnasition;
+    border: 2px solid $Medium-Gray;
+    padding: 10px 15px;
+    border-radius: $border-radiuds;
+  @at-root  &:hover{
+        border: 2px solid $Almost-Black;
+    }
+}
+// rotate class
+// .rotate{
+//     transform: rotate(180deg);
+// }

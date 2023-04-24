@@ -1,0 +1,60 @@
+// Media
+// Max
+$maxMobile-375px: "(max-width:375px)";
+$maxMobile: "(max-width:767px)";
+$maxSmall: "(max-width:991px)";
+$maxLarge: "(max-width:1200px)";
+// Min
+$minSmall: "(min-width:768px)";
+$minMedium: "(min-width:992px)";
+$minLarge: "(min-width:1200px)";
+
+
+
+// float
+$float-left: left;
+$float-right: right;
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Neutral
+
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+
+// ## Typography
+
+// ### Body Copy
+
+$Font-size-paragraph: 18px;
+
+// texts
+
+$text-right: right;
+$text-left: left;
+
+// Cursors
+$cursor-pointer: pointer;
+
+// border radius
+$border-radiuds: 10px;
+
+// shadows
+$Level-Four: 0px 14px 28px 0px rgba(0, 0, 0, 0.25);
+
+//gabs
+$main-gap: 60px;
+
+@media #{$maxSmall} {
+  $main-gap: 20px;
+}
+// transitions
+$main-trnasition: 0.3s;

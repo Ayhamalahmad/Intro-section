@@ -1,0 +1,18 @@
+@use "../helpes/variables" as *;
+
+%display-flex{
+display: flex;
+align-items: center;
+}
+%gab{
+    gap: 60px;
+    @media #{$maxSmall} {
+        gap: 20px;
+    }
+    @media #{$maxMobile} {
+        gap: 10px;
+    }
+}
+%cursor-pointer{
+    cursor: pointer;
+}

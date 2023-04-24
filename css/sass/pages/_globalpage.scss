@@ -1,0 +1,32 @@
+@use "../helpes/mixins" as *;
+@use "../helpes/variables" as *;
+
+// font-family: 'Cairo', sans-serif;
+// font-family: 'Epilogue', sans-serif;
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
+
+* {
+  @include prefixer(box-sizing, border-box, ("webkit", "moz", "o", "ms"));
+}
+body {
+  background-color: $Almost-White;
+  font: {
+    family: "Cairo", sans-serif;
+    size: 16px;
+  }
+  &.reshow::before {
+    content: "";
+    @include overlay;
+    background-color: rgb(0 0 0 / 60%);
+  }
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,94 @@
+@use "../helpes/variables" as *;
+@use "../helpes/placeholders" as *;
+
+/* Start Landing */
+.landing {
+  margin: 20px 0;
+  
+  .container {
+    @extend %display-flex;
+    gap:60px;
+    @media #{$maxMobile} {
+      flex-direction: column-reverse;
+    }
+    .text {
+      gap: 20px;
+      @extend %display-flex;
+      flex-direction: column;
+      @media #{$maxMobile} {
+        align-items: center;
+      }
+      @media #{$minLarge} {
+        margin-top: 130px;
+      }
+      align-items: start;
+      h1 {
+        font-size: 5rem;
+        @media #{$maxMobile} {
+          font-size: 2rem;
+        }
+        @media #{$minSmall} {
+          font-size: 3rem;
+        }
+        @media #{$minLarge} {
+          font-size: 4rem;
+        }
+
+        span {
+          display: block;
+          @media #{$maxMobile} {
+            display: initial;
+          }
+        }
+      }
+      p {
+        line-height: 1.8;
+        margin: 0; 
+        max-width: 100%;
+        font-size: 18px;
+        width: 23rem;
+      }
+      .Learn-more {
+        background-color: $Almost-Black;
+        color: $Almost-White;
+        margin: 20px 0;
+        @media #{$maxMobile} {
+          margin-bottom: 60px;
+        }
+        @extend %cursor-pointer;
+        &:hover {
+          background-color: $Almost-White;
+          color: $Almost-Black;
+        }
+      }
+      .brands {
+        @extend %display-flex;
+        @extend %gab;
+        @media #{$minMedium} {
+          margin-top: 5rem;
+
+
+        }
+        @media #{$minLarge} {
+          margin-top: 10rem;
+        }
+        img {
+          
+          @media #{$maxMobile} {
+            width: calc(100% / 5);
+            margin: auto;
+          }
+        }
+      }
+    }
+    .image {
+      img {
+        max-width: 100%;
+        @media #{$maxMobile} {
+          content: url("../imges/image-hero-mobile.png");
+        }
+      }
+    }
+  }
+}
+/* End Landing */

@@ -1,0 +1,195 @@
+@use "../helpes/variables" as *;
+@use "../helpes/placeholders" as *;
+@use "../helpes/mixins" as *;
+/*Start Header*/
+.Features-li,.company-li,.careers,.about,.login,.register{
+  color: $Medium-Gray;
+  transition: $main-trnasition;
+  font-weight: bold;
+
+  &:hover{
+    color: $Almost-Black;
+  }
+  .ul-features,.company-ul li{
+    font-weight: initial;
+    color: initial;
+  }
+}
+.header {
+
+  margin-top: 20px;
+  .container {
+    @extend %display-flex;
+    @media #{$maxMobile} {
+      justify-content: space-between;
+    }
+  }
+  .logo {
+    top: 10px;
+    position: relative;
+    margin-right: 5rem;
+  }
+  .menu {
+    @extend %cursor-pointer;
+    display: none;
+    font-size: 30px;
+    margin-top: 5px;
+    z-index: 5;
+    @media #{$maxMobile} {
+      display: inherit;
+    }
+    &.close-menu {
+      content: url("../imges/icon-close-menu.svg");
+    }
+  }
+  .navbar {
+    width: 100%;
+    .links,
+    .login-part {
+      &.show {
+        display: block !important;
+      }
+    }
+ 
+    .dropdown-icon-one, .dropdown-icon-tow{
+      margin:0 10px;
+    }
+    @media #{$maxMobile} {
+      position: absolute;
+      flex-direction: column;
+    }
+    &.reshow {
+      @media #{$maxMobile} {
+        position: absolute;
+        flex-direction: column;
+        height: 100vh;
+        background-color: $Almost-White;
+        top: -20px;
+        right: 0;
+        width: 60%;
+        padding-top: 4rem;
+        padding-bottom: 10rem;
+        box-shadow: $Level-Four;
+        z-index: 4;
+    
+      }
+      
+    }
+    @extend %display-flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    .links {
+      @extend %display-flex;
+      @extend %gab;
+      .rotate {
+        transform: rotate(180deg);
+      }
+      li {
+        position: relative;
+      
+
+        &:not(:last-of-type) {
+          @media #{$maxMobile} {
+            margin-bottom: 25px;
+          }
+        }
+        @extend %cursor-pointer;
+        @at-root .ul-features,
+          .company-ul {
+          @media #{$minSmall} {
+            position: absolute;
+            top: 50px;
+            background-color: $Almost-White;
+            padding: 30px;
+            width: 200px;
+            left: -53px;
+            box-shadow: $Level-Four;
+            border-radius: $border-radiuds;
+            z-index: 5;;
+          }
+       
+          @media #{$maxMobile} {
+            li {
+              padding-left: 30px;
+            }
+          }
+          img {
+            padding: 0 10px;
+            @media #{$maxMobile} {
+              left: 20px;
+            }
+          }
+        }
+        .ul-features {
+          display: none;
+
+          &.show {
+            display: initial;
+          }
+        }
+        li {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+            @media #{$maxMobile} {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+    .company-ul {
+      width: 150px;
+      left: -22px;
+      text-align: initial;
+      display: none;
+      &.show {
+        display: initial;
+      }
+    }
+    .company-li {
+      .rotatetow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .login-part {
+    @extend %display-flex;
+    @extend %gab;
+    .login {
+      @extend %cursor-pointer;
+      @media #{$maxMobile} {
+        margin: 15px 0;
+      }
+    }
+    .register {
+      @extend %cursor-pointer;
+    }
+  }
+  .links,
+  .login-part {
+    @media #{$maxMobile} {
+      display: none !important;
+    }
+    &.reshow {
+      display: block !important;
+      position: absolute;
+    }
+  }
+  .links {
+    &.reshow {
+      display: block !important;
+      left: 30px;
+    }
+  }
+  .login-part {
+    &.reshow {
+      position: absolute;
+      top: 25rem;
+      text-align: center;
+      width: 100%;
+      padding: 0 37px;
+    }
+  }
+}
+/*End Header*/
